@@ -2,6 +2,17 @@ import React, { Component } from "react";
 import { Menu, Segment, Dropdown } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
+const SecondaryDD = () => {
+  return (
+    <Dropdown text="Week One">
+      <Dropdown.Menu>
+        <Dropdown.Item>Test</Dropdown.Item>
+        <Dropdown.Item>Large</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+};
+
 class Test extends Component {
   state = { activeItem: "home" };
 
@@ -22,7 +33,9 @@ class Test extends Component {
           </Link>
           <Dropdown item text="Curriculum">
             <Dropdown.Menu>
-              <Dropdown.Item>Test</Dropdown.Item>
+              <Dropdown.Item>
+                <SecondaryDD />
+              </Dropdown.Item>
               <Dropdown.Item>Large</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
