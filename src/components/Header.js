@@ -2,18 +2,7 @@ import React, { Component } from "react";
 import { Menu, Segment, Dropdown } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-const SecondaryDD = () => {
-  return (
-    <Dropdown text="Week One">
-      <Dropdown.Menu>
-        <Dropdown.Item>Test</Dropdown.Item>
-        <Dropdown.Item>Large</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  );
-};
-
-class Test extends Component {
+class Header extends Component {
   state = { activeItem: "home" };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -24,28 +13,33 @@ class Test extends Component {
     return (
       <Segment inverted>
         <Menu inverted secondary>
-          <Link to="/test">
-            <Menu.Item
-              name="home"
-              active={activeItem === "home"}
-              onClick={this.handleItemClick}
-            />
-          </Link>
-          <Dropdown item text="Curriculum">
+          <Menu.Item
+            as={Link}
+            to="/"
+            name="home"
+            active={activeItem === "home"}
+            onClick={this.handleItemClick}
+          />
+
+          <Dropdown as={Link} to="/curriculum" item text="Curriculum">
             <Dropdown.Menu>
-              <Dropdown.Item>
-                <SecondaryDD />
+              <Dropdown.Item as={Link} to="/topic">
+                Topic
               </Dropdown.Item>
               <Dropdown.Item>Large</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Menu.Item
-            name="curriculum"
+            as={Link}
+            to="/project"
+            name="Project"
             active={activeItem === "messages"}
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name="friends"
+            as={Link}
+            to="/practice"
+            name="Practice"
             active={activeItem === "friends"}
             onClick={this.handleItemClick}
           />
@@ -55,4 +49,4 @@ class Test extends Component {
   }
 }
 
-export default Test;
+export default Header;
