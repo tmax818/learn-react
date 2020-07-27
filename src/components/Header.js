@@ -32,18 +32,20 @@ class Header extends Component {
           <Nav className="mr-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Curriculum
+                Options
               </DropdownToggle>
               <DropdownMenu right>
+                <DropdownItem>Option 1</DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem divider />
                 <DropdownItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Week One
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>test</DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                  <DropdownToggle nav caret>
+                    Options
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    <DropdownItem>Option 1</DropdownItem>
+                    <DropdownItem>Option 2</DropdownItem>
+                  </DropdownMenu>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
