@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Test from "./Test";
 
 class Main extends Component {
   render() {
-    return <div>Main</div>;
+    return (
+      <div>
+        <Test />
+      </div>
+    );
   }
 }
 
